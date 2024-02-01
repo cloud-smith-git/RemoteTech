@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Parts Request</title>
+    <link rel="shortcut icon" type="image/jpg" href="/Media/a1favicon.jpg">
 </head>
 <body>
     <h1>Parts Request Form</h1>
+
+    <form method="POST" action="/admin/">{% csrf_token %}
+        
+        <textarea cols="50" rows="15" placeholder="Enter parts needed"></textarea>
+        
+        <div>
+            <button type = "submit">Submit</button>
+        </div>
+        
+
+    </form>
 </body>
 </html>
