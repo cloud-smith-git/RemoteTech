@@ -1,12 +1,38 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/Media/a1favicon.jpeg" type="image/jpeg">
+    <link rel="shortcut icon" type="image/png" href="{%static 'favicon.png'%}">
+    <link rel="stylesheet" href="{%static 'home.css' %}">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Home Page...eventually</h1>
+    <div id="container">
+        <div class="left"></div>
+        <div class="center">
+            <div class="header"><img src="{%static 'a1header.jpeg' %}" alt="A1"></div>
+            <div class="vehicle">
+                <a href="/vehicle">Vehicle Check</a>
+            </div>
+            <div class="parts">
+                <a href="/parts">Parts Request</a>
+            </div>
+            <div class="fuel">
+                <a href="/fuel">Fuel Receipt</a>
+            </div>
+            <div class="tests">
+                <a href="/tests">Testing</a>
+            </div>
+            <div class="admin">
+                <a href="/admin"><img src="{%static 'admin.png' %}" alt="admin"></a>
+                <p>Admin</p>
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
 </body>
 </html>

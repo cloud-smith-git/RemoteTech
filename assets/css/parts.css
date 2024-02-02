@@ -1,0 +1,44 @@
+#container {
+    display: flex;
+}
+div.left {
+    flex-basis: 15%;
+    
+}
+div.center {
+    flex-basis: 70%;
+    text-align: center;
+    
+    
+}
+div.center h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.right {
+    flex-basis: 15%;
+}
+body {
+    background-color: maroon;
+}
+div.button {
+    padding-top: 20px;
+    }
+button {
+    height: 45px;
+    width: 100px;
+    border-radius: 15px;
+    color: maroon;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.home {
+    padding-top: 30px;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}

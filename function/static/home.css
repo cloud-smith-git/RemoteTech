@@ -1,0 +1,108 @@
+body {
+    background-color: maroon;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.left {
+    flex-basis: 15%;
+}
+
+div.center {
+    flex-basis: 70%;
+    text-align: center;
+}
+
+div.vehicle a {
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 25px;
+    border: 4px solid white;
+    border-radius: 10px;   
+}
+
+div.parts a {
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 25px;
+    border: 4px solid white;
+    border-radius: 10px;
+}
+
+div.fuel a {
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 25px;
+    border: 4px solid white;
+    border-radius: 10px;
+}
+
+div.tests a {
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 25px;
+    border: 4px solid white;
+    border-radius: 10px;
+}
+
+div.admin img {
+    height: 60px;
+    width: 60px;
+}
+
+div.admin p {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+div.vehicle {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+div.parts {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}   
+
+div.fuel {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+div.tests {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+div.admin {
+    padding-top: 100px;
+    color: white;
+}
+
+div.header {
+    padding: 20px;
+    background-color: white;
+}
