@@ -1,4 +1,23 @@
 from django.views.generic import TemplateView
+from django.http import HttpResponseRedirect
+from django.http import HttpResponse
+from django.shortcuts import render
+from django.contrib.auth import get_user
+from django import forms
+
+from .forms import PartsForm
+
+
+def parts_form(request):
+    if request.method == 'POST':
+        form = PartsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = PartsForm()
+    return render(request, 'partsForm.html', {'form': form})
+
 
 
 class HomePage(TemplateView):
@@ -10,8 +29,8 @@ class Vehicle(TemplateView):
 class Fuel(TemplateView):
     template_name = 'fuel.html'
 
-class Part(TemplateView):
-    template_name = 'parts.html'
+# class Part(TemplateView):
+    # template_name = 'partsForm.html'
 
 class Test(TemplateView):
     template_name = 'tests.html'

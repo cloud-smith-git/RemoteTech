@@ -1,24 +1,24 @@
 from django.contrib import admin
-from .models import Part
-from .models import Vehicle
-from .models import Fuel
+from .models import PartRequest
+from .models import VehicleCheck
+from .models import FuelPurchase
 from .models import Test
 
 # Register your models here.
-class PartAdmin(admin.ModelAdmin):
+class PartRequestAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Part, PartAdmin)
+admin.site.register(PartRequest, PartRequestAdmin)
 
-class VehicleAdmin(admin.ModelAdmin):
+class VehicleCheckAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Vehicle, VehicleAdmin)
+admin.site.register(VehicleCheck, VehicleCheckAdmin)
 
-class FuelAdmin(admin.ModelAdmin):
+class FuelPurchaseAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Fuel, FuelAdmin)
+admin.site.register(FuelPurchase, FuelPurchaseAdmin)
 
 class TestAdmin(admin.ModelAdmin):
     pass
