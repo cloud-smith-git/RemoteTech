@@ -4,28 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parts Request</title>
-    <link rel="stylesheet" type="text/css" href="{%static 'parts.css' %}"> 
     <link rel="shortcut icon" type="image/png" href="{%static 'favicon.png'%}">
+    <link rel="stylesheet" href="{%static 'fuel.css' %}">
+    <title>Fuel Receipt</title>
 </head>
-
 <body>
+    <div class="home">
+        <a href="/"><img src="{%static 'home.png' %}" alt="Home"></a>
+    </div>
+    <div class="header"><h1>Fuel Receipt Capture</h1></div>
     <div id="container">
         <div class="left"></div>
         <div class="center">
-            <div class="home">
-                <a href="/"><img src="{% static 'home.png' %}" alt=""></a>
-            </div>
-
-            <h1>Parts Request Form</h1>
-
-            <form method="POST" action="/parts_form/" enctype="multipart/form-data">
-                
+            <form method="POST" action="/fuel_form/" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form }}
-                
                 <button type="submit">Submit</button>
-                
             </form>
         </div>
         <div class="right"></div>
