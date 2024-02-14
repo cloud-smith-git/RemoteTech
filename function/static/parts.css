@@ -39,18 +39,6 @@ button {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-div.home {
-    padding-top: 30px;
-    font-size: 40px;
-    text-align: center;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 div.footer {
     color: white;
     text-align: center;

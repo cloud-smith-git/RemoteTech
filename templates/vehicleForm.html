@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="{%static 'favicon.png'%}">
-    <link rel="stylesheet" href="{%static 'vehicle.css' %}">
+    <link rel="stylesheet" href="{%static 'fuel.css' %}">
     <title>Vehicle Check</title>
 </head>
 <body>
@@ -15,23 +15,30 @@
     <div class="header"><h1>Vehicle Check Form</h1></div>
     <div id="container">
         
-            <div class="one"></div>
-            <div class="two">
-                <form method="POST" action="/vehicle_form/" enctype="multipart/form-data">
-                    
-                    {% csrf_token %}
-                    {{form}}
-                    <button type="submit">Submit</button>
+        <div class="left"></div>
+        <div class="center">
+            <form method="POST" action="/vehicle_form/" enctype="multipart/form-data">
+                
+                {% csrf_token %}
+            
+                {% for fm in form %}
+                    <div>
+                        <label style="color:white; font-size: 18px; font-family: Arial, Helvetica, sans-serif;"> {{ fm.label }} </label>
+                        <p >{{fm}}</p>
+                    </div>
+                {% endfor %}
+                <button type="submit">Submit</button>
 
-                </form>
-            </div>    
-            <div class="four"></div>
+            </form>
+        </div>    
+        <div class="right"></div>
     
     </div>
-    <!-- <div class="textarea"><textarea name="Additional" cols="50" rows="5" placeholder="Enter additional details"></textarea></div> 
-    <div class="button">
-        <button type="submit">Submit</button> -->
-    </div>
-    <div class="footer">
+    <!-- <div class="footer">
         <p class="copyright">Mick Miller © 2024</p>
-    </div>
+    </div>  -->
+    
+</body> 
+
+</html>
+```   

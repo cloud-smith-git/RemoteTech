@@ -3,7 +3,7 @@ body {
 }
 
 div.header {
-    /* font-size: 25px; */
+    font-size: 25px; 
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: white;
@@ -14,26 +14,17 @@ div.header {
     display: flex; 
 }
 
-div.one {
+div.left {
     flex-basis: 20%;
+}
+
+div.center {
+    flex-basis: 60%;
     text-align: center;
 }
 
-div.two {
-    flex-basis: 30%;
-    text-align: center;
-    padding-left: 170px;
-}
-
-div.three {
-    flex-basis: 30%;
-    text-align: center;
-    padding-right: 170px;
-}
-
-div.four {
+div.right {
     flex-basis: 20%;
-    text-align: center;
 }
 
 div.button {

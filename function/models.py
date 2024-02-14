@@ -74,7 +74,7 @@ class FuelPurchase(models.Model):
     vehicle = models.IntegerField()
     miles = models.IntegerField()
     amount = models.FloatField()
-    image = models.ImageField(upload_to=None, blank=True, default='None')
+    image = models.ImageField(upload_to='djangouploads/files/receipts', blank=True, default='None')
     
 class Test(models.Model):
     pass

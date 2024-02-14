@@ -5,7 +5,7 @@ from .models import WINDSHIELD_CHOICES, WIPER_CHOICES, OIL_CHOICES, TIRE_CHOICES
 
 class PartsForm (ModelForm):
     name = forms.CharField(max_length=50, required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    parts = forms.CharField(max_length=255, required=True, widget=forms.Textarea(attrs={'class': 'form-control'}))
+    parts = forms.CharField(max_length=255, label= 'Enter Needed Parts and Supplies', required=True, widget=forms.Textarea(attrs={'class': 'form-control'}))
         
     class Meta:
         model = PartRequest
@@ -14,16 +14,16 @@ class PartsForm (ModelForm):
 
 class VehicleForm (ModelForm):
     name = forms.CharField(max_length=50, required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    vehicle = forms.IntegerField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    miles = forms.IntegerField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    oil_change = forms.IntegerField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    vehicle = forms.IntegerField(required=True, label='Vehicle Number', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    miles = forms.IntegerField(required=True, label='Current Mileage',widget=forms.TextInput(attrs={'class': 'form-control'}))
+    oil_change = forms.IntegerField(required=True, label='Miles Since Last Oil Change',widget=forms.TextInput(attrs={'class': 'form-control'}))
     windshield = forms.ChoiceField(choices=WINDSHIELD_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control'}))
     wipers = forms.ChoiceField(choices=WIPER_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control'}))
     oil = forms.ChoiceField(choices=OIL_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control'}))
     tires = forms.ChoiceField(choices=TIRE_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control'}))
     headlights = forms.ChoiceField(choices=HEADLIGHT_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control'}))
     tail_lights = forms.ChoiceField(choices=TAILLIGHT_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control'}))
-    additional = forms.CharField(required=False, widget=forms.Textarea(attrs={'class': 'form-control'}))
+    additional = forms.CharField(required=False, label='Additional Info', widget=forms.Textarea(attrs={'class': 'form-control'}))
     
     class Meta:
         model = VehicleCheck
@@ -34,10 +34,10 @@ class VehicleForm (ModelForm):
         
     
 class FuelForm (ModelForm):
-    vehicle = forms.IntegerField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    miles = forms.IntegerField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    amount = forms.DecimalField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    image = forms.ImageField(required=False, widget=forms.FileInput(attrs={'class': 'form-control'}))
+    vehicle = forms.IntegerField(required=True, label= "Vehicle Number", widget=forms.TextInput(attrs={'class': 'form-control'}))
+    miles = forms.IntegerField(required=True, label="Current Mileage", widget=forms.TextInput(attrs={'class': 'form-control'}))
+    amount = forms.DecimalField(required=True, label="Purchase Amount", widget=forms.TextInput(attrs={'class': 'form-control'}))
+    image = forms.ImageField(required=False, label="Upload Image of Receipt", widget=forms.FileInput(attrs={'class': 'form-control'}))
     
     class Meta:
         model = FuelPurchase

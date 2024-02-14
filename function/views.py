@@ -33,7 +33,7 @@ def vehicle_form(request):
 
 def fuel_form(request):
     if request.method == 'POST':
-        form = FuelForm(request.POST)
+        form = FuelForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/')
@@ -43,15 +43,6 @@ def fuel_form(request):
 
 class HomePage(TemplateView):
     template_name = 'home.html'
-
-# class Vehicle(TemplateView):
-    # template_name = 'vehicle.html'
-
-# class Fuel(TemplateView):
-    # template_name = 'fuel.html'
-
-# class Part(TemplateView):
-    # template_name = 'partsForm.html'
 
 class Test(TemplateView):
     template_name = 'tests.html'
