@@ -1,5 +1,6 @@
 from django.db import models
 
+
 WINDSHIELD_CHOICES = [
     ('Good', 'Good'),
     ('Cracked', 'Cracked'),
@@ -76,6 +77,4 @@ class FuelPurchase(models.Model):
     amount = models.FloatField()
     image = models.ImageField(upload_to='djangouploads/files/receipts', blank=True, default='None')
     
-class Test(models.Model):
-    pass
-
+    

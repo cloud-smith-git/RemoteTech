@@ -2,9 +2,9 @@ from django.views.generic import TemplateView
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.contrib.auth import get_user
 from django import forms
-
+from django.shortcuts import redirect,render
+from .models import VehicleCheck, PartRequest, FuelPurchase
 from .forms import PartsForm, VehicleForm, FuelForm
 
 
@@ -40,6 +40,9 @@ def fuel_form(request):
     else:
         form = FuelForm()
     return render(request, 'fuelForm.html', {'form': form})
+
+
+
 
 class HomePage(TemplateView):
     template_name = 'home.html'

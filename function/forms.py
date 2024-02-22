@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import VehicleCheck, PartRequest, FuelPurchase, Test
+from .models import VehicleCheck, PartRequest, FuelPurchase
 from .models import WINDSHIELD_CHOICES, WIPER_CHOICES, OIL_CHOICES, TIRE_CHOICES, HEADLIGHT_CHOICES, TAILLIGHT_CHOICES
 
 class PartsForm (ModelForm):
@@ -44,3 +44,6 @@ class FuelForm (ModelForm):
         fields = ['vehicle', 'miles', 'amount', 'image']
         
 
+
+        
+        
