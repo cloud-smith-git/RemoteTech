@@ -76,5 +76,3 @@ class FuelPurchase(models.Model):
     miles = models.IntegerField()
     amount = models.FloatField()
     image = models.ImageField(upload_to='djangouploads/files/receipts', blank=True, default='None')
-    
-    

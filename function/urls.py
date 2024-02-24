@@ -15,5 +15,4 @@ urlpatterns = [
     path('parts_form/', views.parts_form, name = 'parts_form'),
     path('vehicle_form/', views.vehicle_form, name = 'vehicle_form'),
     path('fuel_form/', views.fuel_form, name = 'fuel_form'),
-    
 ]

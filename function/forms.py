@@ -42,8 +42,3 @@ class FuelForm (ModelForm):
     class Meta:
         model = FuelPurchase
         fields = ['vehicle', 'miles', 'amount', 'image']
-        
-
-
-        
-        
